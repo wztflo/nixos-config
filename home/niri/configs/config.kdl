@@ -1,0 +1,11 @@
+environment {
+  LANG "zh_CN.UTF-8"
+}
+include "input.kdl"
+include "output.kdl"
+include "layout.kdl"
+include "misc.kdl"
+include "animations.kdl"
+include "window-rules.kdl"
+include "noctalia.kdl"
+include "binds.kdl"

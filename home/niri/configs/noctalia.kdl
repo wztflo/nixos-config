@@ -1,0 +1,20 @@
+// Noctalia compositor settings for Niri.
+// Reference: https://docs.noctalia.dev/v4/getting-started/compositor-settings/niri/
+
+// Rounded corners for a modern look.
+window-rule {
+    geometry-corner-radius 20
+    // Clips window contents to the rounded corner boundaries.
+    clip-to-geometry true
+}
+
+// Allows notification actions and window activation from Noctalia.
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+// Set the overview wallpaper on the backdrop (blurred overview).
+layer-rule {
+    match namespace="^noctalia-overview*"
+    place-within-backdrop true
+}
