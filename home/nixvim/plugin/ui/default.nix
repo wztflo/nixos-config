@@ -1,4 +1,8 @@
 { ... }: {
+  imports = [
+    ./neotree.nix
+  ];
+
   programs.nixvim = {
     # 🌟 开启 Catppuccin 配色，它会自动适配下面的 lualine 和 bufferline
     colorschemes.catppuccin = {
@@ -62,7 +66,7 @@
     keymaps = [
       {
         mode = "n";
-        key = "<leader>e";
+        key = "<leader>ra";
         action = "<cmd>Yazi<CR>";
         options.desc = "打开 Yazi 文件管理器";
       }
