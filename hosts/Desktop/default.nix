@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/system.nix
+    ../../modules/pkgs.nix
     ../../modules/desktop.nix
     ../../modules/hardware.nix
     ../../modules/boot.nix

@@ -2,6 +2,9 @@
 {
   imports = [
     inputs.catppuccin.homeModules.catppuccin
+    inputs.nixvim.homeModules.nixvim
+
+    ./nixvim
   ];
 
   home.username = "wztflo";
@@ -37,7 +40,6 @@
     # 单独启用的工具
     ripgrep.enable = true;
     fd.enable = true;
-    neovim.enable = true;
     fastfetch.enable = true;
     bottom.enable = true;
 
@@ -60,9 +62,6 @@
 
   # 其他纯软件包
   home.packages = with pkgs; [
-    nano
-    wget
-    curl
     python3
   ];
 }
