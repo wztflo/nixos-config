@@ -10,7 +10,8 @@
   home.username = "wztflo";
   home.homeDirectory = "/home/wztflo";
   home.stateVersion = "26.05";
-
+  home.language.base = "zh_CN.UTF-8";
+  
   xdg.enable = true;
 
   programs = {
