@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ./neotree.nix
+    ./noice.nix
   ];
 
   programs.nixvim = {
