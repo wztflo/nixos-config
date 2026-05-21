@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.nixvim.plugins.rainbow-delimiters = {
+  plugins.rainbow-delimiters = {
     enable = true;
 
     settings = {

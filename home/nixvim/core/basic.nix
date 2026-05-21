@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.nixvim.opts = {
+  opts = {
     # ---- 行号设置 ----
     number = true; # 显示绝对行号
     relativenumber = true; # 显示相对行号（极度方便跳转）

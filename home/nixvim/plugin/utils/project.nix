@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.nixvim.plugins.project-nvim = {
+  plugins.project-nvim = {
     enable = true;
     lazyLoad = {
       enable = true;

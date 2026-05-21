@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.nixvim.plugins.mini-indentscope = {
+  plugins.mini-indentscope = {
     enable = true;
     lazyLoad = {
       enable = true;
