@@ -50,7 +50,7 @@
     bottom.enable = true;
 
   }
-  // (lib.genAttrs [ "zoxide" "yazi" "eza" "fzf" ] (name: {
+  // (lib.genAttrs [ "zoxide" "yazi" "eza" "fzf" "lazygit" ] (name: {
     # 批量合并需要开启 fish 集成的工具
     enable = true;
     enableFishIntegration = true;
