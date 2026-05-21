@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   programs.nixvim.autoCmd = [
     # 1. 复制文本时闪烁高亮（非常直观的视觉反馈）
     {

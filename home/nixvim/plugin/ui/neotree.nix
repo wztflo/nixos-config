@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     plugins.neo-tree = {
       enable = true;
@@ -7,9 +8,9 @@
         enable_git_status = true;
         enable_refresh_on_write = true;
         close_if_last_window = true;
-        
+
         filesystem = {
-          hijack_netrw_behavior = "open_default"; 
+          hijack_netrw_behavior = "open_default";
         };
 
         window = {

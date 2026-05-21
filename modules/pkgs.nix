@@ -1,12 +1,11 @@
-{ config, pkgs , ...}:
+{ config, pkgs, ... }:
 
 {
-environment.systemPackages = with pkgs; [
-    curl 
+  environment.systemPackages = with pkgs; [
+    curl
     nano
     wget
   ];
-
 
   environment.variables = {
     EDITOR = "nano";

@@ -1,4 +1,9 @@
-{ pkgs, inputs, lib, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 {
   imports = [
     inputs.catppuccin.homeModules.catppuccin
@@ -11,7 +16,7 @@
   home.homeDirectory = "/home/wztflo";
   home.stateVersion = "26.05";
   home.language.base = "zh_CN.UTF-8";
-  
+
   xdg.enable = true;
 
   programs = {
@@ -44,7 +49,8 @@
     fastfetch.enable = true;
     bottom.enable = true;
 
-  } // (lib.genAttrs [ "zoxide" "yazi" "eza" "fzf" ] (name: {
+  }
+  // (lib.genAttrs [ "zoxide" "yazi" "eza" "fzf" ] (name: {
     # 批量合并需要开启 fish 集成的工具
     enable = true;
     enableFishIntegration = true;

@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     # 🌟 将全局 Leader 键（前缀键）设为空格
     globals.mapleader = " ";

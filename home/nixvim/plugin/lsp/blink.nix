@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim.plugins = {
     # 🌟 启用 blink-cmp 插件
     blink-cmp = {
@@ -9,7 +10,12 @@
         keymap.preset = "super-tab";
 
         # 补全源设置（Blink 内置了这些源，开箱即用，无需额外装包）
-        sources.default = [ "lsp" "path" "snippets" "buffer" ];
+        sources.default = [
+          "lsp"
+          "path"
+          "snippets"
+          "buffer"
+        ];
 
         # 华丽的补全浮窗美化
         completion = {
@@ -21,7 +27,10 @@
           # 在提示列表右侧直接显示华丽的 LSP 标签（如 [Function], [Variable]）
           menu.draw.columns = [
             [ "kind_icon" ]
-            [ "label" "label_description" ]
+            [
+              "label"
+              "label_description"
+            ]
           ];
         };
 

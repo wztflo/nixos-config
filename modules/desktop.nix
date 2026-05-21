@@ -15,7 +15,10 @@
     ];
     config = {
       common = {
-        default = [ "gnome" "gtk" ];
+        default = [
+          "gnome"
+          "gtk"
+        ];
       };
     };
   };

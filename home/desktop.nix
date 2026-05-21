@@ -13,7 +13,10 @@ in
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      sansSerif = [ "HarmonyOS Sans SC" "HarmonyOS Sans" ];
+      sansSerif = [
+        "HarmonyOS Sans SC"
+        "HarmonyOS Sans"
+      ];
       monospace = [ "JetBrainsMono Nerd Font" ];
     };
   };

@@ -1,9 +1,10 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     #  必须加上这两个基础的 Vim 原生选项，UFO 插件才能接管系统折叠
     opts = {
       foldcolumn = "1"; # 在最左侧显示一条极简的折叠指示线
-      foldlevel = 99;   # 默认打开文件时不折叠任何代码
+      foldlevel = 99; # 默认打开文件时不折叠任何代码
       foldlevelstart = 99;
       foldenable = true;
     };
@@ -11,11 +12,14 @@
     plugins.nvim-ufo = {
       enable = true;
       setupLspCapabilities = true;
-      
+
       lazyLoad = {
         enable = true;
         settings = {
-          event = [ "BufReadPost" "BufNewFile" ];
+          event = [
+            "BufReadPost"
+            "BufNewFile"
+          ];
         };
       };
 
@@ -65,13 +69,19 @@
         mode = "n";
         key = "zR";
         action.__raw = "function() require('ufo').openAllFolds() end";
-        options = { silent = true; desc = "打开全部代码"; };
+        options = {
+          silent = true;
+          desc = "打开全部代码";
+        };
       }
       {
         mode = "n";
         key = "zM";
         action.__raw = "function() require('ufo').closeAllFolds() end";
-        options = { silent = true; desc = "折叠全部代码"; };
+        options = {
+          silent = true;
+          desc = "折叠全部代码";
+        };
       }
       {
         mode = "n";
@@ -84,7 +94,10 @@
             end
           end
         '';
-        options = { silent = true; desc = "查看折叠代码/LSP文档"; };
+        options = {
+          silent = true;
+          desc = "查看折叠代码/LSP文档";
+        };
       }
     ];
   };

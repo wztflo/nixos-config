@@ -1,11 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     plugins = {
       treesitter = {
         enable = true;
         folding.enable = false;
         nixvimInjections = true;
-        
+
         settings = {
           highlight.enable = true;
           indent.enable = true;
@@ -38,7 +39,10 @@
       treesitter.lazyLoad = {
         enable = true;
         settings = {
-          event = [ "BufReadPost" "BufNewFile" ];
+          event = [
+            "BufReadPost"
+            "BufNewFile"
+          ];
         };
       };
     };

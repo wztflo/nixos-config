@@ -1,13 +1,17 @@
-{ ... }: {
+{ ... }:
+{
   programs.nixvim = {
     # 1. 启用并配置 noice
     plugins.noice = {
       enable = true;
-      
+
       lazyLoad = {
         enable = true;
         settings = {
-          event = [ "DeferredUIEnter" "BufReadPost" ];
+          event = [
+            "DeferredUIEnter"
+            "BufReadPost"
+          ];
         };
       };
 
@@ -16,7 +20,7 @@
           enabled = true;
           view = "notify"; # 接管路由
         };
-        
+
         lsp = {
           signature.enabled = false;
           progress.enabled = false;
@@ -34,12 +38,15 @@
     # 2. 启用并配置负责颜值渲染的 notify
     plugins.notify = {
       enable = true;
-      
+
       # 🌟 修复：采用和 noice 一致的触发时机，防止两者脱节
       lazyLoad = {
         enable = true;
         settings = {
-          event = [ "DeferredUIEnter" "BufReadPost" ];
+          event = [
+            "DeferredUIEnter"
+            "BufReadPost"
+          ];
         };
       };
 
