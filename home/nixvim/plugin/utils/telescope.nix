@@ -135,11 +135,17 @@
       action = "<CMD>Telescope help_tags theme=ivy layout_config={height=0.4}<CR>";
       key = "<leader>H";
       options = {
-
         silent = true;
         desc = "帮助查询";
       };
-
+    }
+    {
+      action = "<CMD>Telescope keymaps<CR>";
+      key = "<leader>sk";
+      options = {
+        silent = true;
+        desc = "搜索所有快捷键";
+      };
     }
   ];
 

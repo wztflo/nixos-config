@@ -12,6 +12,9 @@
         neotree = true;
         treesitter = true;
         notify = true;
+        which_key = true;
+        blink_cmp = true;
+        ufo = true;
       };
     };
   };
