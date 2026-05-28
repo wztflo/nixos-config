@@ -5,8 +5,6 @@ in
 {
   imports = [
     ./fcitx5
-    ./niri
-    ./noctalia
     ./ghostty
   ];
 

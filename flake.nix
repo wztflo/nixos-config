@@ -62,6 +62,22 @@
           ++ sharedModules;
         };
 
+        nixos-vm = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/VM
+            {
+              home-manager.users.wztflo = {
+                imports = [
+                  ./home/common.nix
+                  ./home/desktop.nix
+                ];
+              };
+            }
+          ] ++ sharedModules;
+        };
+
         nixos-wsl = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
